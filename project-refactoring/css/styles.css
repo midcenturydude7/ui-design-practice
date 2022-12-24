@@ -234,10 +234,12 @@ p {
 
   header {
     grid-area: header;
+    max-width: 1200px;
   }
 
   main {
     grid-area: main;
+    max-width: 1200px;
   }
 
   a.logo {
