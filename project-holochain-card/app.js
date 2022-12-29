@@ -7,8 +7,7 @@ const paraTwo = document.querySelector(".para-two");
 
 second.addEventListener("click", () => {
   paraOne.style.display = "none";
-  let element = paraTwo;
-  element.classList.replace("para-two", "clicked-right");
+  paraTwo.classList.replace("para-two", "clicked-right");
   colOne.style.borderBottom = "none";
   colTwo.style.borderBottom = "4px solid black";
 });
