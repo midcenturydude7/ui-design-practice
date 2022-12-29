@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: poppins, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+div.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+div.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 0 1em;
+  width: 60%;
+  padding: 1.75em 2.25em;
+  border-radius: 15px;
+  box-shadow: 0 0 70px 40px rgba(0, 0, 0, 0.171)
+}
+
+div.row > h1 { 
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+div.one {
+  border-bottom: 4px solid black;
+}
+
+div.one, 
+div.two {
+  padding-bottom: .75em;
+}
+
+div.three {
+  grid-column: 1 / -1;
+  border-top: 1px solid black;
+  padding: 2.25em 0 5.75em;
+}
+
+div.three > p {
+  margin-left: .25em;
+  font-size: 1.1rem;
+}
+
+p.para-one {
+  display: block;
+}
+
+p.para-two {
+  display: none;
+}
