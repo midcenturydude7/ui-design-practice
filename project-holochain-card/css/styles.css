@@ -27,7 +27,8 @@ div.card-wrapper {
   width: 60%;
   padding: 1.75em 2.25em;
   border-radius: 15px;
-  box-shadow: 0 0 70px 40px rgba(0, 0, 0, 0.171)
+  box-shadow: 0 0 70px 30px rgba(0, 0, 0, 0.171);
+  overflow: hidden;
 }
 
 div.row > h1 { 
@@ -53,12 +54,27 @@ div.three {
 div.three > p {
   margin-left: .25em;
   font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 p.para-one {
   display: block;
 }
 
-p.para-two {
+.para-two {
   display: none;
+}
+
+div.three .clicked-right {
+  animation: right-to-left .2s linear backwards alternate;
+}
+
+@keyframes right-to-left {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0);
+  } 
 }
