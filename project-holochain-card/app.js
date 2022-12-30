@@ -12,7 +12,8 @@ const paraTwo = document.querySelector(".para-two");
 // The 411
 first.addEventListener(
   "click",
-  () => {
+  (e) => {
+    e.preventDefault;
     colOne.style.borderBottom = "4px solid black";
     colTwo.style.borderBottom = "none";
 
