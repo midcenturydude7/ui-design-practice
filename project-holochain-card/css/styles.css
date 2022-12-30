@@ -8,6 +8,13 @@ body {
   font-family: poppins, sans-serif;
 }
 
+button {
+  border: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -62,17 +69,51 @@ p.para-one {
   display: block;
 }
 
-.para-two {
+p.para-one-invisible {
   display: none;
 }
 
-div.three .clicked-right {
-  animation: right-to-left .2s linear backwards alternate;
+p.para-two {
+  display: none;
+}
+
+.clicked-right {
+  display: block;
+  animation: right-to-left .18s linear backwards;
 }
 
 @keyframes right-to-left {
   0% {
     transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0);
+  } 
+}
+
+.clicked-right-reverse {
+  animation: right-to-left-reverse .15s linear backwards;
+}
+
+@keyframes right-to-left-reverse {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.clicked-left {
+  display: block;
+  animation: left-to-right .18s linear forwards;
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(-150%);
   }
 
   100% {
