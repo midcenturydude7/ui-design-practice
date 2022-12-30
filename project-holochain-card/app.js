@@ -1,3 +1,5 @@
+"use strict";
+
 const colOne = document.querySelector(".one");
 const colTwo = document.querySelector(".two");
 const first = document.getElementById("first");
@@ -6,38 +8,38 @@ const paraOne = document.querySelector(".para-one");
 const paraTwo = document.querySelector(".para-two");
 
 // The 411
-first.addEventListener("click", () => {
-  paraTwo.style.display = "none";
-  paraOne.classList.replace("para-one-invisible", "clicked-left");
-  colOne.style.borderBottom = "4px solid black";
-  colTwo.style.borderBottom = "none";
-});
+first.addEventListener(
+  "click",
+  () => {
+    colOne.style.borderBottom = "4px solid black";
+    colTwo.style.borderBottom = "none";
+
+    paraTwo.classList.remove("para-two");
+    void paraTwo.offsetWidth;
+    paraTwo.classList.add("para-two");
+
+    paraOne.classList.remove("para-one-invisible");
+    void paraOne.offsetWidth;
+    paraOne.classList.add("clicked-left");
+  },
+  false
+);
 
 // What's Next
-second.addEventListener("click", () => {
-  paraOne.classList.replace("para-one", "para-one-invisible");
-  paraTwo.classList.replace("para-two", "clicked-right");
-  colOne.style.borderBottom = "none";
-  colTwo.style.borderBottom = "4px solid black";
-});
+second.addEventListener(
+  "click",
+  (e) => {
+    e.preventDefault;
+    colOne.style.borderBottom = "none";
+    colTwo.style.borderBottom = "4px solid black";
 
-// function infoBtn() {
-//   first.addEventListener("click", () => {
-//     paraTwo.style.display = "none";
-//     paraOne.classList.replace("para-one-invisible", "clicked-left");
-//     colOne.style.borderBottom = "4px solid black";
-//     colTwo.style.borderBottom = "none";
-//   });
-// }
+    paraOne.classList.remove("para-one");
+    void paraOne.offsetWidth;
+    paraOne.classList.add("para-one-invisible");
 
-// function nextBtn() {
-//   second.addEventListener("click", () => {
-//     paraOne.classList.replace("para-one", "para-one-invisible");
-//     paraTwo.classList.replace("para-two", "clicked-right");
-//     colOne.style.borderBottom = "none";
-//     colTwo.style.borderBottom = "4px solid black";
-//   });
-// }
-
-// second.onclick = nextBtn();
-// first.onclick = infoBtn();
+    paraTwo.classList.remove("para-two");
+    void paraTwo.offsetWidth;
+    paraTwo.classList.add("clicked-right");
+  },
+  false
+);
