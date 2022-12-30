@@ -1,5 +1,7 @@
+// Reset animation
 "use strict";
 
+// DOM variables
 const colOne = document.querySelector(".one");
 const colTwo = document.querySelector(".two");
 const first = document.getElementById("first");
@@ -14,6 +16,7 @@ first.addEventListener(
     colOne.style.borderBottom = "4px solid black";
     colTwo.style.borderBottom = "none";
 
+    // Reset animation helper
     paraTwo.classList.remove("para-two");
     void paraTwo.offsetWidth;
     paraTwo.classList.add("para-two");
@@ -33,6 +36,7 @@ second.addEventListener(
     colOne.style.borderBottom = "none";
     colTwo.style.borderBottom = "4px solid black";
 
+    // Reset animation helper
     paraOne.classList.remove("para-one");
     void paraOne.offsetWidth;
     paraOne.classList.add("para-one-invisible");
