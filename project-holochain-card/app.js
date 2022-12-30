@@ -17,11 +17,12 @@ first.addEventListener(
     colOne.style.borderBottom = "4px solid black";
     colTwo.style.borderBottom = "none";
 
-    // Reset animation helper
+    // Reset animation helper: hides graph #2
     paraTwo.classList.remove("para-two");
     void paraTwo.offsetWidth;
     paraTwo.classList.add("para-two");
 
+    // Reset animation helper: shows graph #1 w/animation
     paraOne.classList.remove("para-one-invisible");
     void paraOne.offsetWidth;
     paraOne.classList.add("clicked-left");
@@ -37,11 +38,12 @@ second.addEventListener(
     colOne.style.borderBottom = "none";
     colTwo.style.borderBottom = "4px solid black";
 
-    // Reset animation helper
+    // Reset animation helper: hides graph #1
     paraOne.classList.remove("para-one");
     void paraOne.offsetWidth;
     paraOne.classList.add("para-one-invisible");
 
+    // Reset animation helper: shows graph #2 w/animation
     paraTwo.classList.remove("para-two");
     void paraTwo.offsetWidth;
     paraTwo.classList.add("clicked-right");
