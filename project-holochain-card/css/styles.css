@@ -8,13 +8,6 @@ body {
   font-family: poppins, sans-serif;
 }
 
-button {
-  border: none;
-  font-size: 1.35rem;
-  font-weight: 800;
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -94,20 +87,6 @@ p.para-two {
   100% {
     transform: translateX(0);
   } 
-}
-
-.clicked-right-reverse {
-  animation: right-to-left-reverse .15s linear backwards;
-}
-
-@keyframes right-to-left-reverse {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(150%);
-  }
 }
 
 .clicked-left {
